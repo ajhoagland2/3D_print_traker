@@ -9,3 +9,7 @@ function commit(nextState = state) {
 }
 
 renderApp(state, commit);
+
+window.addEventListener("hashchange", () => {
+  renderApp(state, commit);
+});
